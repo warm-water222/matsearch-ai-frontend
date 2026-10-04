@@ -27,7 +27,7 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { name: "Home", href: "/", icon: FlaskConical },
   { name: "New Search", href: "/search", icon: Search },
-  { name: "Active Search", href: "/search/9732bb74-6eac-4fab-9549-7fdf116823db", icon: Activity, badge: "PROD" },
+  { name: "Active Search", href: "/search/9732bb74-6eac-4fab-9549-7fdf116823db", icon: Activity },
   { name: "Compare", href: "/compare", icon: ArrowLeftRight },
   { name: "History", href: "/history", icon: History },
   { name: "Saved", href: "/saved", icon: Bookmark },
@@ -105,10 +105,10 @@ export default function Sidebar() {
           </div>
           <div className="flex flex-col">
             <span className="text-xs font-mono text-[#F1F5F9] font-medium">
-              Dr. V. Rao
+              MatSearch AI
             </span>
             <span className="text-[10px] font-mono text-[#94A3B8]">
-              Materials Lead
+              Workspace
             </span>
           </div>
         </div>

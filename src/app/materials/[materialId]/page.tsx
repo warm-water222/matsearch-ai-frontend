@@ -265,7 +265,7 @@ export default function MaterialDetailPage({
                     {isStable ? (
                       <>
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#10B981]" />
-                        <span className="text-[#10B981]">Ground State (is_stable)</span>
+                        <span className="text-[#10B981]">Thermodynamically stable (is_stable)</span>
                       </>
                     ) : (
                       <>

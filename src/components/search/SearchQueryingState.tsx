@@ -88,7 +88,7 @@ export default function SearchQueryingState({
         </div>
 
         <div className="mt-6 text-[10px] font-mono text-[#475569]">
-          Backend Service Parity Check: Synchronous polling active • Stream v2026.04
+          Live updates from the MatSearch AI backend
         </div>
       </div>
     </div>

@@ -145,7 +145,7 @@ export default function SearchExecutionPage({
 
             <Link
               href={`/reports?searchId=${encodeURIComponent(id)}`}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-[#00E5FF] hover:bg-[#4CD6FB] text-xs font-semibold text-[#0B0F12] transition-colors"
+              aria-disabled={!state?.report} tabIndex={state?.report ? 0 : -1} title={state?.report ? undefined : "No report is available for this search"} className={`flex items-center gap-1.5 px-3 py-1.5 bg-[#00E5FF] hover:bg-[#4CD6FB] text-xs font-semibold text-[#0B0F12] transition-colors ${state?.report ? "" : "pointer-events-none opacity-40"}`}
             >
               <Download className="w-3.5 h-3.5 stroke-[2.5]" />
               <span>Engineering Dossier</span>
@@ -172,14 +172,14 @@ export default function SearchExecutionPage({
           <div className="p-3 bg-[#12181F] border border-[#1F2D3A] flex flex-col">
             <span className="text-[10px] text-[#94A3B8] uppercase">Critic Validation</span>
             <span className="text-[11px] font-bold text-[#F59E0B] mt-1">
-              {state?.critic_result || "PENDING"}
+              {state?.critic_result || (isFailed ? "Not run" : "PENDING")}
             </span>
           </div>
 
           <div className="p-3 bg-[#12181F] border border-[#1F2D3A] flex flex-col">
             <span className="text-[10px] text-[#94A3B8] uppercase">Engineering Report</span>
             <span className="text-[11px] font-bold text-[#10B981] mt-1">
-              {state?.report ? "Available" : "In Progress"}
+              {state?.report ? "Available" : isFailed ? "Not generated" : isCompleted ? "Not available" : "In progress"}
             </span>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function SearchExecutionPage({
           {/* Right Column: Candidates Matrix & Validation Panels (8 cols) */}
           <div className="lg:col-span-8 flex flex-col gap-6">
             {!state?.candidates || state.candidates.length === 0 ? (
-              <ZeroCandidatesState prompt={query} />
+              <ZeroCandidatesState prompt={query} searchId={id} failed={isFailed} completed={isCompleted} failedStep={state?.current_step} errors={state?.errors} onRefresh={() => refetch()} />
             ) : (
               <CandidatesMatrix
                 materials={state.candidates}

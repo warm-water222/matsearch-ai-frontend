@@ -331,7 +331,7 @@ export default function NewSearchPage() {
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-[10px] font-mono px-1.5 py-0.5 bg-[#18222C] text-[#00E5FF] border border-[#1F2D3A]">
-                    Production Benchmark
+                    Example search
                   </span>
                   <ArrowRight className="w-3.5 h-3.5 text-[#94A3B8] group-hover:text-[#00E5FF] transition-colors" />
                 </div>

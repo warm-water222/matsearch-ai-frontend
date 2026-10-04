@@ -86,7 +86,7 @@ export default function HomePage() {
               </span>
             </div>
             <span className="text-[10px] font-mono text-[#475569]">
-              PROD-STATION // LIVE BACKEND
+              LIVE BACKEND
             </span>
           </div>
 
@@ -132,7 +132,7 @@ export default function HomePage() {
                 Agent Directive Input
               </span>
               <span className="text-[#475569] text-[11px] font-mono">
-                / production-api
+                
               </span>
             </div>
             <div className="flex items-center gap-2 font-mono text-[10px]">
@@ -307,7 +307,7 @@ export default function HomePage() {
                     className="p-2.5 bg-[#090F15] border border-[#1F2D3A] hover:border-[#00E5FF] transition-colors flex items-center justify-between group"
                   >
                     <div>
-                      <div className="text-[10px] font-mono text-[#00E5FF]">PRODUCTION BENCHMARK SEARCH</div>
+                      <div className="text-[10px] font-mono text-[#00E5FF]">EXAMPLE SEARCH</div>
                       <div className="text-xs text-[#F1F5F9] font-mono">9732bb74-6eac-4fab-9549-7fdf116823db</div>
                     </div>
                     <ArrowRight className="w-4 h-4 text-[#94A3B8] group-hover:text-[#00E5FF]" />
