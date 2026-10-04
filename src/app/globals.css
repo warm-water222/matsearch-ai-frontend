@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0f12;
+  --foreground: #f1f5f9;
+  
+  --surface-base: #0b0f12;
+  --surface-1: #12181f;
+  --surface-2: #18222c;
+  --surface-3: #1f2d3a;
+  --surface-hover: #223242;
+
+  --border-structural: #1f2d3a;
+  --border-interactive: #2a3c4d;
+
+  --accent-cyan: #00e5ff;
+  --accent-cyan-dim: #00b4d8;
+  --accent-cyan-dark: #00363d;
+
+  --text-primary: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-dim: #475569;
+
+  --signal-success: #10b981;
+  --signal-warning: #f59e0b;
+  --signal-error: #ef4444;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface-base: var(--surface-base);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-border-structural: var(--border-structural);
+  --color-border-interactive: var(--border-interactive);
+
+  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-cyan-dim: var(--accent-cyan-dim);
+  --color-accent-cyan-dark: var(--accent-cyan-dark);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-text-dim: var(--text-dim);
+
+  --color-signal-success: var(--signal-success);
+  --color-signal-warning: var(--signal-warning);
+  --color-signal-error: var(--signal-error);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+code, pre, .font-mono, [data-mono] {
+  font-family: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Custom scrollbars for technical workstation feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2d3a;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00b4d8;
+}
+
+/* Strict sharp corners throughout workstation */
+button, input, select, textarea, .card, .panel {
+  border-radius: 0px !important;
+}
